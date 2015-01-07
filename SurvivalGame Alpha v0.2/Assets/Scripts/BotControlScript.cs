@@ -27,7 +27,7 @@ public class BotControlScript : MonoBehaviour
 
 	static int idleState = Animator.StringToHash("Base Layer.Estar normal");	
 	static int locoState = Animator.StringToHash("Base Layer.Correr");			// these integers are references to our animator's states
-	static int jumpState = Animator.StringToHash("Base Layer.Jump");				// and are used to check state for various actions to occur
+	static int jumpState = Animator.StringToHash("Base Layer.Saltar corriendo");				// and are used to check state for various actions to occur
 	static int jumpDownState = Animator.StringToHash("Base Layer.JumpDown");		// within our FixedUpdate() function below
 	static int fallState = Animator.StringToHash("Base Layer.Fall");
 	static int rollState = Animator.StringToHash("Base Layer.Roll");
