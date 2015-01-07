@@ -16,6 +16,7 @@ public class BotControlScript : MonoBehaviour
 	public float animSpeed = 1.5f;				// a public setting for overall animator animation speed
 	public float lookSmoother = 3f;				// a smoothing setting for camera motion
 	public bool useCurves;						// a setting for teaching purposes to show use of curves
+	public bool correr;
 
 	
 	private Animator anim;							// a reference to the animator on the character
@@ -24,9 +25,9 @@ public class BotControlScript : MonoBehaviour
 	private CapsuleCollider col;					// a reference to the capsule collider of the character
 	
 
-	static int idleState = Animator.StringToHash("Base Layer.Idle");	
-	static int locoState = Animator.StringToHash("Base Layer.Locomotion");			// these integers are references to our animator's states
-	static int jumpState = Animator.StringToHash("Base Layer.Jump");				// and are used to check state for various actions to occur
+	static int idleState = Animator.StringToHash("Base Layer.Estar normal");	
+	static int locoState = Animator.StringToHash("Base Layer.Correr");			// these integers are references to our animator's states
+	static int jumpState = Animator.StringToHash("Base Layer.Saltar corriendo");				// and are used to check state for various actions to occur
 	static int jumpDownState = Animator.StringToHash("Base Layer.JumpDown");		// within our FixedUpdate() function below
 	static int fallState = Animator.StringToHash("Base Layer.Fall");
 	static int rollState = Animator.StringToHash("Base Layer.Roll");
@@ -56,8 +57,17 @@ public class BotControlScript : MonoBehaviour
 		
 		if(anim.layerCount ==2)		
 			layer2CurrentState = anim.GetCurrentAnimatorStateInfo(1);	// set our layer2CurrentState variable to the current state of the second Layer (1) of animation
-		
-		
+
+		if (Input.GetKey (KeyCode.LeftShift)) {
+			
+			correr = true;
+			anim.SetBool ("Run", correr);
+			
+		} else {
+			correr = false;
+			anim.SetBool ("Run", correr);
+		}
+
 		// LOOK AT ENEMY
 		
 		// if we hold Alt..
@@ -78,7 +88,7 @@ public class BotControlScript : MonoBehaviour
 		// if we are currently in a state called Locomotion (see line 25), then allow Jump input (Space) to set the Jump bool parameter in the Animator to true
 		if (currentBaseState.nameHash == locoState)
 		{
-			if(Input.GetButtonDown("Jump"))
+			if(Input.GetKey (KeyCode.Space))
 			{
 				anim.SetBool("Jump", true);
 			}
