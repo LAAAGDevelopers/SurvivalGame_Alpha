@@ -4,7 +4,7 @@ private var survivalScript : Survivalcontroller;
 
 function Start () 
 {
-	survivalScript = GameObject.Find("First Person Controller").GetComponent(Survivalcontroller);
+	survivalScript = GameObject.Find("muneco5").GetComponent(Survivalcontroller);
 }
 
 function OnTriggerStay (Col : Collider)
@@ -12,7 +12,7 @@ function OnTriggerStay (Col : Collider)
     if( (Col.tag == "Player") && (Input.GetKey(KeyCode.E)) )
     {
         Destroy(gameObject);
-        survivalScript.currentHealth += 25;
+        survivalScript.currentHunger += 25;
         
     }
 }

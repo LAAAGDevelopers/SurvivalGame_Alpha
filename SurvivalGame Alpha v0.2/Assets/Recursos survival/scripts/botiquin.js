@@ -3,7 +3,7 @@ private var survivalScript : Survivalcontroller;
 
 function Start ()
 {
-    survivalScript = GameObject.Find("First Person Controller").GetComponent(Survivalcontroller);
+    survivalScript = GameObject.Find("muneco5").GetComponent(Survivalcontroller);
 }
 
 function OnTriggerStay (Col : Collider)
