@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BotControlScript.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Recursos survival\scripts\botiquin.js">
     <Files>
-      <File FileName="Assets\Scripts\BotControlScript.cs" Line="118" Column="29" />
+      <File FileName="Assets\Recursos survival\scripts\agua.js" Line="18" Column="2" />
+      <File FileName="Assets\Recursos survival\scripts\botiquin.js" Line="17" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
