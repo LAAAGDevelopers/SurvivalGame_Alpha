@@ -1,12 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Recursos survival\scripts\botiquin.js">
-    <Files>
-      <File FileName="Assets\Recursos survival\scripts\dropspawner.js" Line="1" Column="1" />
-      <File FileName="Assets\Recursos survival\scripts\agua.js" Line="1" Column="1" />
-      <File FileName="Assets\Recursos survival\scripts\botiquin.js" Line="17" Column="2" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
